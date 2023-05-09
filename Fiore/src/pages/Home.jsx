@@ -3,6 +3,8 @@ import React from "react";
 import Footer from "../components/Footer";
 import CardFlower from "../components/CardFlower";
 import Layout from "../components/Layout";
+import Adspic1 from "../assets/ads/Ads01.png"
+// import Ads from "../components/Ads";
 
 function Home() {
   const dataFlowerHome = [
@@ -16,7 +18,8 @@ function Home() {
   ];
   return (
     <Layout>
-    <div style={{ height: "270px", width: "100vw" }}> inside box maii</div>
+      <div></div>
+    <div style={{ height: "270px", width: "100vw", backgroundImage:`url(${Adspic1})` }}></div> 
       <div>
         <div style={{ marginLeft: "45px" }}>
           <h1

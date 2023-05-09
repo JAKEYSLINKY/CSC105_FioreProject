@@ -1,7 +1,8 @@
 import React from "react";
-import Adspicture from "../assets/ads/Ads01.png";
-import Adspicture from "../assets/ads/Ads02.png";
-import Adspicture from "../assets/ads/Ads03.png";
+// import Bootstrap from "bootstrap";
+// import Adspicture from "../assets/ads/Ads01.png";
+// import Adspicture from "../assets/ads/Ads02.png";
+// import Adspicture from "../assets/ads/Ads03.png";
 
 
 function Ads() {
