@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../pages/Home";
 import "../css/App.css";
 import CustomOwn from "../pages/CustomOwn";
+import Buynow from "../pages/Buynow";
 
 function App() {
   return (
@@ -11,7 +12,9 @@ function App() {
         <Routes>
           <Route path="/">
             <Route index element={<Home />} />
-            <Route path="custom" element={<CustomOwn />} />
+            <Route path="CustomOwn" element={<CustomOwn />} />
+            <Route path="Buynow" element={<Buynow/>}/>
+            <Route path="myCart" element={<myCart/>}/>
           </Route>
         </Routes>
       </BrowserRouter>

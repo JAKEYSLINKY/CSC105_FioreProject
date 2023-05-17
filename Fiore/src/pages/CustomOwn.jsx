@@ -4,6 +4,7 @@ import BackgroundCardFlower from "../assets/tool/flower_show_case.svg";
 import NavBackgroundButton from "../assets/tool/navbutton.svg";
 import CustomCardFlower from "../components/CustomCardFlower";
 import PositionImage from "../components/PositionImage";
+import ButtonPink from "../assets/tool/ButtonPinkk.svg";
 
 function CustomOwn() {
   const [condition, setCondition] = useState(3);
@@ -102,6 +103,7 @@ function CustomOwn() {
           <div>
             {condition}
             <br />
+            {/* <div style={{backgroundImage: `url(${ButtonPink})`}}>{listFlower.length}</div> */}
             {listFlower.length}
             {/* <div
               style={{

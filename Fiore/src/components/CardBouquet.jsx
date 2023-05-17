@@ -1,9 +1,6 @@
-import React from 'react'
+import BackgroundCardFlower from "../assets/tool/cardflower.svg";
 
-function CardBouquet({title, description, price, src}) {
-  return (
-	<div>CardBouquet</div>
-  )
-}
+// function CardFlower({src,title,setListFlower,listFlower,image,disableButton,}) {
 
-export default CardBouquet
+// }
+// export CardFlower;

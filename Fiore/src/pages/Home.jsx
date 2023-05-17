@@ -1,14 +1,18 @@
 import React from "react";
-// import Ads from "./Ads";
 import Footer from "../components/Footer";
 import CardFlower from "../components/CardFlower";
 import Layout from "../components/Layout";
-import Adspic1 from "../assets/ads/Ads01.png"
-// import Ads from "../components/Ads";
+import Ads from "../components/Ads";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
+
+
+
 
 function Home() {
   const dataFlowerHome = [
-    { title: "Tulip", src: "src/assets/flowergif/gif7.gif" },
+    { title: "Tulip", src: "src/assets/flowergif/gif7.gif"},
     { title: "Jasmine", src: "src/assets/flowergif/gif1.gif" },
     { title: "Sunflower", src: "src/assets/flowergif/gif4.gif" },
     { title: "Rose", src: "src/assets/flowergif/gif6.gif" },
@@ -18,8 +22,11 @@ function Home() {
   ];
   return (
     <Layout>
-      <div></div>
-    <div style={{ height: "270px", width: "100vw", backgroundImage:`url(${Adspic1})` }}></div> 
+      <div>
+        <Ads/>
+<div/>
+
+  </div>
       <div>
         <div style={{ marginLeft: "45px" }}>
           <h1
