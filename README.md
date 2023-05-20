@@ -1,4 +1,1 @@
-# CSC105_FioreProject
-CSC105 WebDevelopment Individual Final Project 
-
-- technology stack
+# IT's not done yet, dont look at my ugly code 😡😡
