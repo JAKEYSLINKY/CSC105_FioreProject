@@ -4,17 +4,17 @@ import CardFlower from "../components/CardFlower";
 import Layout from "../components/Layout";
 import Ads from "../components/Ads";
 import { useState } from "react";
-import Modal from 'react-bootstrap/Modal';
-import Button from 'react-bootstrap/Button';
+// import Modal from 'react-bootstrap/Modal';
+// import Button from 'react-bootstrap/Button';
 import CancelButton from "../assets/tool/cancel_button.svg";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 
 function Home() {
-  const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const [show, setShow] = useState(false);
+  // const handleClose = () => setShow(false);
+  // const handleShow = () => setShow(true);
 
   const dataFlowerHome = [
     { title: "Tulip", src: "src/assets/flowergif/gif7.gif" },
@@ -40,9 +40,9 @@ function Home() {
           >
             Card list
           </h1>
-          <Button variant="primary" onClick={handleShow}>
+          {/* <Button variant="primary" onClick={handleShow}>
         Launch demo modal
-      </Button>
+      </Button> */}
 
           <h3
             className="fontDelius"
@@ -53,7 +53,7 @@ function Home() {
         </div>
         <div style={{ display: "flex", marginTop: "23px", marginLeft: "30px" }}>
           {dataFlowerHome.map((data, index) => {
-            return <CardFlower src={data.src} key={index} title={data.title} setShow={setShow} show={show} />;
+            return <CardFlower src={data.src} key={index} title={data.title} />;
           })}
         </div>
       </div>

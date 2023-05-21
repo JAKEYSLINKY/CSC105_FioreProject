@@ -6,6 +6,9 @@ import BrownButton from "../assets/tool/ButtonBrown.svg";
 import { useState } from "react";
 import SuperBrown from "../assets/tool/SuperBrown.svg";
 import circle from "../assets/tool/circle.svg";
+import BackgroundCardFlower from "../assets/tool/cardflower.svg";
+// import flo1 from "../assets"
+
 
 function Buynow() {
   const [tag, setTag] = useState("");
@@ -21,7 +24,7 @@ function Buynow() {
       title: "RabbitNote",
       price: "999 Baht",
       image: "src/assets/bouquet/bou03.PNG",
-      tag: "For Him/Her",
+      tag: "Graduation",
     },
     {
       title: "TripleSun",
@@ -33,7 +36,7 @@ function Buynow() {
       title: "MixGarden",
       price: "879 Baht",
       image: "src/assets/bouquet/bou01.PNG",
-      tag: "For Him/Her",
+      tag: "Graduation",
     },
     {
       title: "Scalet",
@@ -45,37 +48,37 @@ function Buynow() {
       title: "Bearry",
       price: "1,129 Baht",
       image: "src/assets/bouquet/bou12.PNG",
-      tag: "For Him/Her",
+      tag: "Graduation",
     },
     {
       title: "Mink",
       price: "999 Baht",
       image: "src/assets/bouquet/bou13.PNG",
-      tag: "For Him/Her",
+      tag: "Decoration",
     },
     {
       title: "MonoKai",
       price: "1,099 Baht",
       image: "src/assets/bouquet/bou09.PNG",
-      tag: "For Him/Her",
+      tag: "Colorful",
     },
     {
       title: "Joluno",
       price: "789 Baht",
       image: "src/assets/bouquet/bou07.PNG",
-      tag: "For Him/Her",
+      tag: "Colorful",
     },
     {
       title: "Nattha",
       price: "1,199 Baht",
       image: "src/assets/bouquet/bou05.PNG",
-      tag: "For Him/Her",
+      tag: "Decoration",
     },
     {
       title: "Cotton",
       price: "1,209 Baht",
       image: "src/assets/bouquet/bou04.PNG",
-      tag: "For Him/Her",
+      tag: "Decoration",
     },
     {
       title: "OnlyYou",
@@ -99,13 +102,13 @@ function Buynow() {
       title: "WonderDay",
       price: "799 Baht",
       image: "src/assets/bouquet/bou06.PNG",
-      tag: "For Him/Her",
+      tag: "Colorful",
     },
     {
       title: "Mr.Sunshine",
       price: "1,098 Baht",
       image: "src/assets/bouquet/bou11.PNG",
-      tag: "For Him/Her",
+      tag: "Decoration",
     },
   ];
 
@@ -181,20 +184,33 @@ function Buynow() {
         </div> */}
       </div>
       <div>
-        displayflower
-        {dataBouquet
+        {/* displayflower */}
+        <div style={{display:"flex"}}>
+          {dataBouquet
           .filter((Bouquet) => Bouquet.tag.includes(tag))
           .map((item) => {
             return (
               <div
+              className="fontSwanky"
                 style={{
+                  color:"#A6801F",
                   margin: "15px",
+                  backgroundImage:`url(${BackgroundCardFlower})`,
+                  width: "190px",
+                  height: "250px",
+                  gap:"10px",
+
+
                 }}
               >
                 {item.title}
+                {/* {item.image} */}
+                {item.image}
+                {item.price}
               </div>
             );
           })}
+          </div>
         {/* <img src={BrownButton} alt="" /> */}
       </div>
     </div>
