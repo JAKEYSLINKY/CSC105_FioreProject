@@ -7,8 +7,7 @@ import { useState } from "react";
 import SuperBrown from "../assets/tool/SuperBrown.svg";
 import circle from "../assets/tool/circle.svg";
 import BackgroundCardFlower from "../assets/tool/cardflower.svg";
-// import flo1 from "../assets"
-
+import flo1 from "../assets/flowergif/gif4.gif";
 
 function Buynow() {
   const [tag, setTag] = useState("");
@@ -23,7 +22,7 @@ function Buynow() {
     {
       title: "RabbitNote",
       price: "999 Baht",
-      image: "src/assets/bouquet/bou03.PNG",
+      image: "src/assets/bouquet/bou3.PNG",
       tag: "Graduation",
     },
     {
@@ -35,7 +34,7 @@ function Buynow() {
     {
       title: "MixGarden",
       price: "879 Baht",
-      image: "src/assets/bouquet/bou01.PNG",
+      image: "src/assets/bouquet/bou1.PNG",
       tag: "Graduation",
     },
     {
@@ -59,27 +58,27 @@ function Buynow() {
     {
       title: "MonoKai",
       price: "1,099 Baht",
-      image: "src/assets/bouquet/bou09.PNG",
+      image: "src/assets/bouquet/bou9.PNG",
       tag: "Colorful",
     },
     {
       title: "Joluno",
       price: "789 Baht",
-      image: "src/assets/bouquet/bou07.PNG",
+      image: "src/assets/bouquet/bou7.PNG",
       tag: "Colorful",
     },
     {
       title: "Nattha",
       price: "1,199 Baht",
-      image: "src/assets/bouquet/bou05.PNG",
+      image: "src/assets/bouquet/bou5.PNG",
       tag: "Decoration",
     },
-    {
-      title: "Cotton",
-      price: "1,209 Baht",
-      image: "src/assets/bouquet/bou04.PNG",
-      tag: "Decoration",
-    },
+    // {
+    //   title: "Cotton",
+    //   price: "1,209 Baht",
+    //   image: "src/assets/bouquet/bou04.PNG",
+    //   tag: "Decoration",
+    // },
     {
       title: "OnlyYou",
       price: "999 Baht",
@@ -89,21 +88,21 @@ function Buynow() {
     {
       title: "FlowerFull",
       price: "549 Baht",
-      image: "src/assets/bouquet/bou02.PNG",
+      image: "src/assets/bouquet/bou2.PNG",
       tag: "For Him/Her",
     },
-    {
-      title: "Prema",
-      price: "1,299 Baht",
-      image: "src/assets/bouquet/bou08.PNG",
-      tag: "For Him/Her",
-    },
-    {
-      title: "WonderDay",
-      price: "799 Baht",
-      image: "src/assets/bouquet/bou06.PNG",
-      tag: "Colorful",
-    },
+    // {
+    //   title: "Prema",
+    //   price: "1,299 Baht",
+    //   image: "src/assets/bouquet/bou08.PNG",
+    //   tag: "For Him/Her",
+    // },
+    // {
+    //   title: "WonderDay",
+    //   price: "799 Baht",
+    //   image: "src/assets/bouquet/bou06.PNG",
+    //   tag: "Colorful",
+    // },
     {
       title: "Mr.Sunshine",
       price: "1,098 Baht",
@@ -146,12 +145,19 @@ function Buynow() {
             justifyContent: "right",
             alignItems: "right",
             gap: "20px",
+            position: "fixed",
+            right: "20px",
           }}
         >
           {ButtonCategory.map((Button) => {
             return (
-              <div style={{position:"relative"}}>
-				{Button.tag ===tag && <img src={circle} style={{position:"absolute",top:"-18%"}} />}
+              <div style={{}}>
+                {Button.tag === tag && (
+                  <img
+                    src={circle}
+                    style={{ position: "absolute", top: "-18%" }}
+                  />
+                )}
                 <div
                   style={{
                     display: "flex",
@@ -185,32 +191,79 @@ function Buynow() {
       </div>
       <div>
         {/* displayflower */}
-        <div style={{display:"flex"}}>
+        <div
+          style={{
+            gap: "5",
+            marginTop: "30px",
+            display: "grid",
+            overflow:"hidden",
+            gridTemplateColumns: "repeat(6,1fr)",
+          }}
+        >
           {dataBouquet
-          .filter((Bouquet) => Bouquet.tag.includes(tag))
-          .map((item) => {
-            return (
-              <div
-              className="fontSwanky"
-                style={{
-                  color:"#A6801F",
-                  margin: "15px",
-                  backgroundImage:`url(${BackgroundCardFlower})`,
-                  width: "190px",
-                  height: "250px",
-                  gap:"10px",
+            .filter((Bouquet) => Bouquet.tag.includes(tag))
+            .map((item) => {
+              return (
+
+                <div
+                  className="fontSwanky"
+                  style={{
+                    color: "#A6801F",
+                    margin: "15px",
+                    backgroundImage: `url(${BackgroundCardFlower})`,
+                    width: "190px",
+                    height: "250px",
+                    gap: "10px",
+                    justifyContent: "center",
+                    display: "flex",
+                    alignItems: "end",
+                    position: "relative",
+
+                    // wordBreak:"break-word"
+                    // maxWidth: "100%"
+                  }}
+                >
+                   {/* <div>
+                    {item.title}
+                    {item.price}
+                    </div> */}
+                  <div
+                    style={{
+                      fontSize: "30px",
+                      top: "-30px",
+                      alignItems: "center",
+                      paddingBottom:"140px",
+                      paddingRight:"30px"
+
+                    }}
+                  >
+
+                    <img
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        objectFit: "contain",
+                        position: "absolute",
+                        top: "-10px",
+                        left: "0px",
+                      }}
+                      src={item.image}
+                    />
 
 
-                }}
-              >
-                {item.title}
-                {/* {item.image} */}
-                {item.image}
-                {item.price}
-              </div>
-            );
-          })}
-          </div>
+                  </div>
+                  <div style={{ fontSize: "18px", paddingBottom: "20px",paddingRight:"40px", lineHeight:"1"}}>
+  {item.title}<br/>
+  {item.price}
+</div>
+
+                  {/* {item.image} */}
+                </div>
+
+              );
+            })}
+        </div>
+
         {/* <img src={BrownButton} alt="" /> */}
       </div>
     </div>

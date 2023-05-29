@@ -61,6 +61,7 @@ function CustomOwn() {
 
   return (
     <Layout>
+      <div style={{color:"rgb(128, 74, 11", justifyContent:"center", display:"flex", backgroundColor:"pink", paddingBottom:"15px", paddingTop:"15px", paddingLeft:"10px", paddingRight:"10px"}}> <h5 >Announcement! Even if the ordering process is still in progress, you may already use Fiore to personalize your own bouquet now, enjoy trying and stay tuned!</h5></div>
       <div
         style={{
           display: "flex",
@@ -103,25 +104,34 @@ function CustomOwn() {
             />
             <PositionImage listFlower={listFlower} />
           </div>
-          {/* <div style={{width:"65px",height:"150px"}}> */}
-          <div>
-            {condition}
-            <br />
-            {/* <div style={{backgroundImage: `url(${ButtonPink})`}}>{listFlower.length}</div> */}
-            {/* <div style={{backgroundImage:`url(${WhiteButtonShadow})`}}>{listFlower.length}</div> */}
-            {listFlower.length}
-            {/* <div
-              style={{
+
+          <div style={{paddingLeft:"100px", paddingTop:"15px"}}>
+            <div style={{
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                width: "50px",
-                height: "50px",
-                backgroundImage: `url(${BackgroundCardFlower})`,
+                width: "153px",
+                height: "61px",
+                marginBottom:"-20px",
+                backgroundImage: `url(${WhiteButtonShadow})`,
                 color: "#CD7D20",
-                objectFit: "contain",
-              }}
-            ></div> */}
+              }}>Size : {condition}</div><div>
+
+            <br />
+            {/* <div style={{backgroundImage: `url(${ButtonPink})`}}>{listFlower.length}</div> */}
+            {/* <div style={{backgroundImage:`url(${WhiteButtonShadow})`}}>{listFlower.length}</div> */}
+            <div style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                width: "153px",
+                height: "61px",
+                marginBottom:"0px",
+                backgroundImage: `url(${WhiteButtonShadow})`,
+                color: "#CD7D20",
+              }}>Currenly : {listFlower.length}</div>
+
+          </div>
           </div>
         </div>
         <div style={{ width: "750px" }}>
