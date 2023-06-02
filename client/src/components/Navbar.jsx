@@ -19,13 +19,14 @@ function Navbar() {
           height: "300px",
           backgroundColor: "pink",
           position: "absolute",
-          zIndex: "10",
+          // zIndex: "10",
           top: "50%",
           left: "-800%",
+
         }}
       >
-        Login
-        
+        <h1 style={{justifyContent:"center"}}>Login</h1>
+
       </div>
     );
   };
@@ -119,3 +120,6 @@ function Navbar() {
 }
 
 export default Navbar;
+
+
+
