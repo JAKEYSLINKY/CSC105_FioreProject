@@ -8,6 +8,8 @@ function Layout(props) {
         style={{
           width: "100vw",
           paddingTop: "97px",
+          zIndex: "-100",
+          position: "relative",
         }}
       >
         {props.children}

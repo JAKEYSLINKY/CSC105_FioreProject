@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import "../css/App.css";
 import CustomOwn from "../pages/CustomOwn";
 import Buynow from "../pages/Buynow";
+import myCart from "../pages/myCart";
 
 function App() {
   return (

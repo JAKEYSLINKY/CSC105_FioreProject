@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/navbar.module.css";
 import NavBackgroundButton from "../assets/tool/navbutton.svg";
 import NavBackgroundButtonCustomOwn from "../assets/tool/navbutton_custom_own.svg";
@@ -10,6 +10,25 @@ import WhiteButtonShadow from "../assets/tool/Whitebuttonwithshadow.svg";
 
 function Navbar() {
   const navigate = useNavigate();
+  const [showPopup, setShowPopup] = useState(false);
+  const CartPopup = () => {
+    return (
+      <div
+        style={{
+          width: "500px",
+          height: "300px",
+          backgroundColor: "pink",
+          position: "absolute",
+          zIndex: "10",
+          top: "50%",
+          left: "-800%",
+        }}
+      >
+        Login
+        
+      </div>
+    );
+  };
   return (
     <div
       style={{
@@ -21,7 +40,10 @@ function Navbar() {
         justifyContent: "space-between",
       }}
     >
-      <h1 className="fontStyleScript" style={{ color: "#804A0B", padding:"10px" }}>
+      <h1
+        className="fontStyleScript"
+        style={{ color: "#804A0B", padding: "10px" }}
+      >
         Fiore
       </h1>
       <div style={{ display: "flex", gap: "18px" }}>
@@ -64,7 +86,7 @@ function Navbar() {
 
         <div
           onClick={() => {
-            navigate("/Buynow")
+            navigate("/Buynow");
           }}
           style={{
             display: "flex",
@@ -78,12 +100,18 @@ function Navbar() {
         >
           BUY NOW
         </div>
-        <div>
-        <img
-          style={{ width: "58px", height: "58px", objectFit: "contain" }}
-          src="src/assets/tool/Cart.png"
-          alt=""
-        />
+        <div
+          style={{ position: "relative" }}
+          onClick={() => {
+            setShowPopup(!showPopup);
+          }}
+        >
+          <img
+            style={{ width: "58px", height: "58px", objectFit: "contain" }}
+            src="src/assets/tool/Cart.png"
+            alt=""
+          />
+          {showPopup && <CartPopup />}
         </div>
       </div>
     </div>

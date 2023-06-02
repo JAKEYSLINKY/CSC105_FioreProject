@@ -1,6 +1,6 @@
 import CustomCardBouquet from "../components/CustomCardBouquet";
 import React from "react";
-import Layout from "../components/Navbar";
+import Layout from "../components/Layout";
 import Searchbar from "./Searchbar";
 import BrownButton from "../assets/tool/ButtonBrown.svg";
 import { useState } from "react";
@@ -114,15 +114,8 @@ function Buynow() {
   console.log("I'm working, dont blame me mtfk");
 
   return (
-    <div>
-      <Layout />
-      <div
-        style={{
-          padding: "100px 60px",
-          width: "100vw",
-          height: "97px",
-        }}
-      >
+    <Layout>
+      <div>
         <div style={{ marginLeft: "0px" }}>
           <h1
             className="fontStyleScript"
@@ -153,6 +146,7 @@ function Buynow() {
             return (
               <div style={{}}>
                 {Button.tag === tag && (
+                  // onClick={=>{()}}
                   <img
                     src={circle}
                     style={{ position: "absolute", top: "-18%" }}
@@ -193,18 +187,18 @@ function Buynow() {
         {/* displayflower */}
         <div
           style={{
-            gap: "5",
+            gap: "4",
             marginTop: "30px",
             display: "grid",
-            overflow:"hidden",
+            overflow: "hidden",
             gridTemplateColumns: "repeat(6,1fr)",
           }}
         >
           {dataBouquet
             .filter((Bouquet) => Bouquet.tag.includes(tag))
             .map((item) => {
+              
               return (
-
                 <div
                   className="fontSwanky"
                   style={{
@@ -223,7 +217,7 @@ function Buynow() {
                     // maxWidth: "100%"
                   }}
                 >
-                   {/* <div>
+                  {/* <div>
                     {item.title}
                     {item.price}
                     </div> */}
@@ -232,12 +226,10 @@ function Buynow() {
                       fontSize: "30px",
                       top: "-30px",
                       alignItems: "center",
-                      paddingBottom:"140px",
-                      paddingRight:"30px"
-
+                      paddingBottom: "140px",
+                      paddingRight: "30px",
                     }}
                   >
-
                     <img
                       style={{
                         width: "100%",
@@ -249,24 +241,29 @@ function Buynow() {
                       }}
                       src={item.image}
                     />
-
-
                   </div>
-                  <div style={{ fontSize: "18px", paddingBottom: "20px",paddingRight:"40px", lineHeight:"1"}}>
-  {item.title}<br/>
-  {item.price}
-</div>
+                  <div
+                    style={{
+                      fontSize: "18px",
+                      paddingBottom: "20px",
+                      paddingRight: "40px",
+                      lineHeight: "1",
+                    }}
+                  >
+                    {item.title}
+                    <br />
+                    {item.price}
+                  </div>
 
                   {/* {item.image} */}
                 </div>
-
               );
             })}
         </div>
 
         {/* <img src={BrownButton} alt="" /> */}
       </div>
-    </div>
+    </Layout>
   );
 }
 
